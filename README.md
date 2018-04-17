@@ -1,5 +1,7 @@
-# qbic-singularity-snpeff
-[![DOI](https://zenodo.org/badge/107653854.svg)](https://zenodo.org/badge/latestdoi/107653854)
+# singularity-snpeff-snpsft
+This is a duplicate project with access to snpeff and snpsift as apps within a singularity container.
+
+This project is an updated format code available from qbicsoftware [snpEff](https://github.com/qbicsoftware/qbic-singularity-snpeff) container
 
 This is a containerized version of the genetic variant annotation tool [SnpEff](http://snpeff.sourceforge.net/). We use [Singularity](http://singularity.lbl.gov/) as container technology.
 
@@ -30,7 +32,7 @@ singularity pull shub://qbicsoftware/qbic-singularity-snpeff:v1.0
 ```
 
 ## How to run the container and calling SnpEff
-To run the container and calling SnpEff you just need to 
+To run the container and calling SnpEff you just need to
 
 ```bash
 singularity exec myContainer.simg snpEff [arguments]
@@ -42,7 +44,7 @@ Providing them inside of the container would make the container big, so we think
 
 You can simple download the databases, unzip them on your filesystem, and bind its `data` directory into the container. If you use snpEff's `-v` verbose output option, you will see that it will find the pre-installed databases and will not try to download it.
 
-Here is an example, where we downloaded the **hg19** reference genome with 
+Here is an example, where we downloaded the **hg19** reference genome with
 
 ```bash
 wget http://downloads.sourceforge.net/project/snpeff/databases/v4_3/snpEff_v4_3_hg19.zip
@@ -56,4 +58,4 @@ singularity exec -B ./data/:/usr/local/lib/snpEff/data snpEff.simg snpEff -v hg1
 
 ## Author
 
-* [Sven Fillinger](https://github.com/sven1103)
+* [Kokulapala (Gokul) Wimalanathan](https://github.com/wkpalan)
