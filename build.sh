@@ -18,7 +18,7 @@ INSTALLDIR=/usr/local/lib
 BINDIR=/usr/local/bin
 
 # Download snpEff version 4.3p
-wget -P $TMPDIR http://sourceforge.net/projects/snpeff/files/snpEff_v4_3p_core.zip
+wget -P $TMPDIR http://sourceforge.net/projects/snpeff/files/snpEff_v4_3t_core.zip
 
 # Unzip snpEff archive
 ls $TMPDIR | xargs -i unzip "$TMPDIR/{}" -d $INSTALLDIR
